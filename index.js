@@ -171,13 +171,13 @@ class SvgUri extends Component{
         componentAtts.height = this.props.height;
       }
 
-      return <Svg key={i} {...componentAtts}>{childs}</Svg>;
+      return <Svg key={i} fill="#fff" {...componentAtts}>{childs}</Svg>;
     case 'g':
       componentAtts = this.obtainComponentAtts(node, G_ATTS);
       return <G key={i} {...componentAtts}>{childs}</G>;
     case 'path':
       componentAtts = this.obtainComponentAtts(node, PATH_ATTS);
-      return <Path key={i} {...componentAtts}>{childs}</Path>;
+      return <Path fill="#fff" key={i} {...componentAtts}>{childs}</Path>;
     case 'circle':
       componentAtts = this.obtainComponentAtts(node, CIRCLE_ATTS);
       return <Circle key={i} {...componentAtts}>{childs}</Circle>;
